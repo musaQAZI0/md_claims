@@ -88,3 +88,12 @@ a.gateway-card:hover { transform:translateY(-5px); border-color:rgba(31,111,178,
 @media (prefers-reduced-motion: reduce) { .transition-transform { transition-duration: 0ms !important; } }
 
 
+
+@keyframes landingFadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+.animate-fade-up { animation:landingFadeUp .65s ease-out both; }
+.animate-fade-up-delayed { animation:landingFadeUp .65s .25s ease-out both; }
+.gateway-card-animated { animation:landingFadeUp .65s .12s ease-out both; }
+.gateway-card-delay { animation-delay:.24s; }
+@media (prefers-reduced-motion: reduce) { .animate-fade-up, .animate-fade-up-delayed, .gateway-card-animated { animation:none !important; } }
+
+

@@ -17,12 +17,12 @@ export default function HomePage() {
           <span className="text-lg font-extrabold tracking-tight text-navy">MD Medical Services</span>
         </header>
         <section className="flex flex-1 flex-col justify-center py-4 sm:py-8" aria-labelledby="services-title">
-          <div className="mx-auto mb-4 max-w-3xl text-center sm:mb-6"><div className="hero-copy">
+          <div className="animate-fade-up mx-auto mb-4 max-w-3xl text-center sm:mb-6"><div className="hero-copy">
             <h1 id="services-title" className="mt-2 text-4xl font-extrabold tracking-[-0.04em] text-navy sm:text-5xl lg:text-6xl">Choose Your Service</h1>
           </div>
           </div>
           <div className="mx-auto w-full max-w-6xl rounded-[32px] border border-border/80 bg-white/70 p-2 shadow-xl shadow-navy/5 sm:p-3"><div className="grid gap-5 md:grid-cols-2">
-            <Link href="/md-claims/" className="gateway-card group" aria-label="Enter MD Claims">
+            <Link href="/md-claims/" className="gateway-card gateway-card-animated group" aria-label="Enter MD Claims">
               <div className="service-icon"><ShieldCheck size={29} aria-hidden="true" /></div>
               <p className="mt-8 text-sm font-bold uppercase tracking-[0.16em] text-medical-blue">Available now</p>
               <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-navy">MD Claims</h2>
@@ -30,7 +30,7 @@ export default function HomePage() {
               <p className="mt-4 flex-1 leading-7 text-muted">Professional medical billing, claims management, and revenue cycle support designed to help healthcare practices streamline administrative workflows.</p>
               <span className="mt-8 inline-flex items-center gap-2 font-bold text-medical-blue">Explore MD Claims <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" aria-hidden="true" /></span>
             </Link>
-            <article className="gateway-card cursor-default bg-white/60" aria-labelledby="sonography-title">
+            <article className="gateway-card gateway-card-animated gateway-card-delay cursor-default bg-white/60" aria-labelledby="sonography-title">
               <div className="service-icon muted-icon"><ScanLine size={29} aria-hidden="true" /></div>
               <span className="mt-8 w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-extrabold uppercase tracking-[0.16em] text-muted">Coming Soon</span>
               <h2 id="sonography-title" className="mt-3 text-3xl font-extrabold tracking-tight text-navy">MD Sonography</h2>
@@ -43,6 +43,7 @@ export default function HomePage() {
     </main>
   );
 }
+
 
 
 
