@@ -97,3 +97,12 @@ a.gateway-card:hover { transform:translateY(-5px); border-color:rgba(31,111,178,
 @media (prefers-reduced-motion: reduce) { .animate-fade-up, .animate-fade-up-delayed, .gateway-card-animated { animation:none !important; } }
 
 
+
+@keyframes processReveal { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+.process-card-animated { animation:processReveal .6s ease-out both; transition:transform .25s,box-shadow .25s,border-color .25s; }
+.process-card-animated:hover { transform:translateY(-6px); border-color:#aac6d7; box-shadow:0 16px 32px rgba(10,31,51,.1); }
+.process-card-animated .process-number { transition:transform .25s,background .25s; }
+.process-card-animated:hover .process-number { transform:scale(1.08); background:#d9eff9; }
+@media (prefers-reduced-motion: reduce) { .process-card-animated { animation:none !important; transition:none; } }
+
+
