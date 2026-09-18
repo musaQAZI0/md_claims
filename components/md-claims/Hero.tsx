@@ -11,7 +11,7 @@ export function Hero({ eyebrow = "MD Claims", title = "Simplifying Medical Billi
           <p className="eyebrow">{eyebrow}</p><h1 id="hero-title" className="mt-4 max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-[-0.045em] text-navy sm:text-5xl lg:text-[52px] xl:text-[60px]">{title} <span className="text-medical-blue">{accent}</span></h1>
           <p className="mt-4 max-w-2xl text-lg leading-8 text-muted">{description}</p>
           <div className="mt-7 flex flex-col flex-wrap gap-3 sm:flex-row">
-            <Button href="/md-claims/#contact">Request a Consultation</Button>
+            <Button href="/md-claims/contact/">Request a Consultation</Button>
             <Button href="/md-claims/#services" variant="secondary">Explore Our Services</Button>
           </div>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-bold text-body">
@@ -24,6 +24,7 @@ export function Hero({ eyebrow = "MD Claims", title = "Simplifying Medical Billi
     </section>
   );
 }
+
 
 
 
