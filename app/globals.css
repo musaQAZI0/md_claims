@@ -84,3 +84,7 @@ a.gateway-card:hover { transform:translateY(-5px); border-color:rgba(31,111,178,
 
 
 
+
+@media (prefers-reduced-motion: reduce) { .transition-transform { transition-duration: 0ms !important; } }
+
+
