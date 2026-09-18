@@ -21,7 +21,7 @@ export default function HomePage() {
             <h1 id="services-title" className="mt-2 text-4xl font-extrabold tracking-[-0.04em] text-navy sm:text-5xl lg:text-6xl">Choose Your Service</h1>
           </div>
           </div>
-          <div className="mx-auto w-full max-w-6xl rounded-[32px] border border-border/80 bg-white/70 p-2 shadow-xl shadow-navy/5 sm:p-3"><div className="grid gap-5 md:grid-cols-2">
+          <div className="mx-auto grid w-full max-w-6xl gap-5 md:grid-cols-2">
             <Link href="/md-claims/" className="gateway-card gateway-card-animated group" aria-label="Enter MD Claims">
               <div className="service-icon"><ShieldCheck size={29} aria-hidden="true" /></div>
               <p className="mt-8 text-sm font-bold uppercase tracking-[0.16em] text-medical-blue">Available now</p>
@@ -37,12 +37,14 @@ export default function HomePage() {
               <p className="mt-2 font-bold text-body">Sonography &amp; Diagnostic Imaging</p>
               <p className="mt-4 flex-1 leading-7 text-muted">The MD Sonography website will be added later as a separate service within MD Medical Services.</p>
               <span className="mt-8 inline-flex items-center gap-2 font-bold text-muted">Launching later <span aria-hidden="true">?</span></span>
-            </article></div></div></section>
+            </article></div></section>
         <footer className="text-center text-sm text-muted">&copy; {new Date().getFullYear()} MD Medical Services</footer>
       </Container>
     </main>
   );
 }
+
+
 
 
 
