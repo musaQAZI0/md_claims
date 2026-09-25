@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
-export function Hero({ eyebrow = "MD Claims", title = "Simplifying Medical Billing.", accent = "Supporting Your Practice.", description = "Professional medical billing, claims management, and administrative support built around your healthcare practice.", image = "/heroes/billing.jpg" }: { eyebrow?: string; title?: string; accent?: string; description?: string; image?: string }) {
+export function Hero({ eyebrow = "MD Billing", title = "Simplifying Medical Billing.", accent = "Supporting Your Practice.", description = "Professional medical billing, claims management, and administrative support built around your healthcare practice.", image = "/heroes/home-hero-generated.jpg" }: { eyebrow?: string; title?: string; accent?: string; description?: string; image?: string }) {
   return (
     <section id="home" className="hero-section scroll-mt-24" style={{ backgroundImage: `linear-gradient(90deg,rgba(247,251,253,.86) 0%,rgba(247,251,253,.68) 48%,rgba(247,251,253,.18) 100%),url("${image}")` }} aria-labelledby="hero-title">
       <Container className="hero-layout">
@@ -24,6 +24,8 @@ export function Hero({ eyebrow = "MD Claims", title = "Simplifying Medical Billi
     </section>
   );
 }
+
+
 
 
 

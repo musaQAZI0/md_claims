@@ -9,13 +9,14 @@ import { Specialties } from "@/components/md-claims/Specialties";
 import { WhyChoose } from "@/components/md-claims/WhyChoose";
 
 export const metadata: Metadata = {
-  title: "MD Claims | Medical Billing & Claims Management",
+  title: "MD Billing | Medical Billing & Claims Management",
   description: "Professional medical billing, claims management, and revenue cycle support for healthcare practices.",
 };
 
 export default function MDClaimsPage() {
   return <><Header /><main><Hero /><About /><Services /><Specialties preview /><WhyChoose /><Process /></main><Footer /></>;
 }
+
 
 
 
