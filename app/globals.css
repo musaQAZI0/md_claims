@@ -119,3 +119,5 @@ a.gateway-card:hover { transform:translateY(-5px); border-color:rgba(31,111,178,
 @media (min-width:640px) { .contact-page-section { padding-top:56px; } }
 
 
+@media (max-width:767px) { .hero-section, .service-detail-hero { background-position:72% center !important; } }
+
