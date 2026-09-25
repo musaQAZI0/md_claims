@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
-export function Hero({ eyebrow = "MD Billing", title = "Simplifying Medical Billing.", accent = "Supporting Your Practice.", description = "Professional medical billing, claims management, and administrative support built around your healthcare practice.", image = "/heroes/home-hero-generated.jpg" }: { eyebrow?: string; title?: string; accent?: string; description?: string; image?: string }) {
+export function Hero({ eyebrow = "MD Billing", title = "Simplifying Medical Billing.", accent = "Supporting Your Practice.", description = "Professional medical billing, claims management, and administrative support built around your healthcare practice.", image = "/heroes/home-hero-generated.jpg", showServices = true }: { eyebrow?: string; title?: string; accent?: string; description?: string; image?: string; showServices?: boolean }) {
   return (
     <section id="home" className="hero-section scroll-mt-24" style={{ backgroundImage: `linear-gradient(90deg,rgba(247,251,253,.86) 0%,rgba(247,251,253,.68) 48%,rgba(247,251,253,.18) 100%),url("${image}")` }} aria-labelledby="hero-title">
       <Container className="hero-layout">
@@ -12,7 +12,7 @@ export function Hero({ eyebrow = "MD Billing", title = "Simplifying Medical Bill
           <p className="mt-4 max-w-2xl text-lg leading-8 text-muted">{description}</p>
           <div className="mt-7 flex flex-col flex-wrap gap-3 sm:flex-row">
             <Button href="/md-claims/contact/">Request a Consultation</Button>
-            <Button href="/md-claims/#services" variant="secondary">Explore Our Services</Button>
+            {showServices && <Button href="/md-claims/#services" variant="secondary">Explore Our Services</Button>}
           </div>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-bold text-body">
             <span className="inline-flex items-center gap-2"><Check size={17} className="text-teal" /> Clear communication</span>
