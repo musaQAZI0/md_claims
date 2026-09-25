@@ -14,7 +14,7 @@ export default function HomePage() {
       <Container className="relative z-10 flex min-h-screen flex-col py-4 sm:py-6">
         <header className="-mx-5 flex items-center gap-3 sm:-mx-8" aria-label="MD Medical Services">
           <span className="brand-mark"><HeartPulse size={25} aria-hidden="true" /></span>
-          <span className="text-lg font-extrabold tracking-tight text-navy">MD Medical Services</span>
+          <span className="text-lg font-extrabold tracking-tight text-navy">MD Professional Services</span>
         </header>
         <section className="flex flex-1 flex-col justify-center py-4 sm:py-8" aria-labelledby="services-title">
           <div className="animate-fade-up mx-auto mb-4 max-w-3xl text-center sm:mb-6"><div className="hero-copy">
@@ -43,6 +43,7 @@ export default function HomePage() {
     </main>
   );
 }
+
 
 
 
