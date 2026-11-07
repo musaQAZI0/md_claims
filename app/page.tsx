@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 
 export const metadata: Metadata = {
   title: "MD Professional Services | Healthcare Services",
-  description: "Explore MD Professional Services and access professional medical billing and claims-management support through MD Billing.",
+  description: "Explore MD Professional Services and access professional medical billing and claims-management support through MD Billing, plus ultrasound and patient information through MD Sonography.",
 };
 
 export default function HomePage() {
@@ -30,14 +30,14 @@ export default function HomePage() {
               <p className="mt-4 flex-1 leading-7 text-muted">Professional medical billing, claims management, and revenue cycle support designed to help healthcare practices streamline administrative workflows.</p>
               <span className="mt-8 inline-flex items-center gap-2 font-bold text-medical-blue">Explore MD Billing <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" aria-hidden="true" /></span>
             </Link>
-            <article className="gateway-card gateway-card-animated gateway-card-delay cursor-default bg-white/60" aria-labelledby="sonography-title">
-              <div className="service-icon muted-icon"><ScanLine size={29} aria-hidden="true" /></div>
-              <span className="mt-8 w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-extrabold uppercase tracking-[0.16em] text-muted">Coming Soon</span>
+            <Link href="/md-sonography/" className="gateway-card gateway-card-animated gateway-card-delay group" aria-labelledby="sonography-title">
+              <div className="service-icon"><ScanLine size={29} aria-hidden="true" /></div>
+              <p className="mt-8 text-sm font-bold uppercase tracking-[0.16em] text-medical-blue">Available now</p>
               <h2 id="sonography-title" className="mt-3 text-3xl font-extrabold tracking-tight text-navy">MD Sonography</h2>
               <p className="mt-2 font-bold text-body">Sonography &amp; Diagnostic Imaging</p>
-              <p className="mt-4 flex-1 leading-7 text-muted">The MD Sonography website will be added later as a separate service within MD Medical Services.</p>
-              <span className="mt-8 inline-flex items-center gap-2 font-bold text-muted">Launching later <span aria-hidden="true">?</span></span>
-            </article></div></section>
+              <p className="mt-4 flex-1 leading-7 text-muted">Explore ultrasound examinations, practical patient information, and guidance to help you prepare for your scan.</p>
+              <span className="mt-8 inline-flex items-center gap-2 font-bold text-medical-blue">Explore MD Sonography <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" aria-hidden="true" /></span>
+            </Link></div></section>
         <footer className="text-center text-sm text-muted">&copy; {new Date().getFullYear()} MD Medical Services</footer>
       </Container>
     </main>

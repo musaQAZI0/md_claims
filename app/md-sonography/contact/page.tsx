@@ -1,0 +1,12 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Phone, Mail, MapPin, Clock, ArrowRight, MessageCircle } from 'lucide-react';
+import PageIntro from '@/components/sonography/PageIntro';
+import Subpage from '@/components/sonography/Subpage';
+export const metadata: Metadata = { title: 'Contact' };
+export default function Contact() {
+ return <Subpage kind="contact-page"><PageIntro eyebrow="04 / CONTACT" title="Start with a conversation." description="Questions about an examination or preparing for a visit? Clinic contact options will appear here as soon as they are confirmed."/>
+ <section className="section-wrap section-space contact-layout"><div className="contact-directory" data-reveal><div className="section-label"><h2>Clinic information</h2><span className="status-pill">Details coming soon</span></div>{[{icon:Phone,title:'Call the clinic',text:'Phone number to be confirmed',note:'For examination and appointment questions'},{icon:Mail,title:'Email us',text:'Email address to be confirmed',note:'For general clinic inquiries'},{icon:Clock,title:'Opening hours',text:'Hours to be confirmed',note:'Check before planning your journey'},{icon:MapPin,title:'Find us',text:'Clinic address to be confirmed',note:'Directions will appear once the address is verified'}].map(({icon:Icon,title,text,note})=><div key={title} className="contact-row"><Icon size={22}/><div><h3>{title}</h3><p>{text}</p><small>{note}</small></div></div>)}</div>
+ <aside className="contact-help" data-reveal><MessageCircle size={32}/><p className="eyebrow">WHILE WE GET READY</p><h2>Useful information is already here.</h2><p>Online inquiries are coming soon. These guides can help you prepare your questions today.</p><nav aria-label="Contact resources">{[['Examination information','/md-sonography/services'],['Preparing for your scan','/md-sonography/patient-information/preparation'],['Appointment information','/md-sonography/appointment']].map(([title,href])=><Link href={href} key={href}>{title}<ArrowRight size={18}/></Link>)}</nav></aside></section>
+ <section className="section-wrap section-space" data-reveal><div className="help-strip"><div><p className="eyebrow">MAKE THE CONVERSATION EASIER</p><h2>Have your examination name ready.</h2><p>The exact wording of your referral helps you ask about availability, preparation, and appointment arrangements.</p></div><Link className="text-link" href="/md-sonography/faq">Explore common questions <ArrowRight size={17}/></Link></div></section></Subpage>;
+}

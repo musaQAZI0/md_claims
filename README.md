@@ -34,3 +34,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## MD Sonography
+
+The service gateway at `/` links to MD Billing (`/md-claims/`) and MD Sonography (`/md-sonography/`). Sonography routes, components, and public assets live in `app/md-sonography`, `components/sonography`, and `public/md-sonography`. Its stylesheet is scoped to `.sonography-site`, and its local Sora font and branding remain separate from billing.
+
+Sonography provides examination guides, patient information, searchable FAQs, and appointment/contact placeholders. Booking and contact integrations still require clinic configuration. All local navigation and imagery use the `/md-sonography` namespace.
+
+Run `npm ci` and `npm run build`. With `npm start` running, `npm test` checks lint, TypeScript, both service route families, and the existing contact API/security behavior.

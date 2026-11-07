@@ -1,0 +1,15 @@
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight, Check } from 'lucide-react';
+import PageIntro from '@/components/sonography/PageIntro';
+import Subpage from '@/components/sonography/Subpage';
+export const metadata: Metadata = { title: 'About' };
+export default function About() {
+ return <Subpage kind="about-page">
+  <PageIntro eyebrow="01 / ABOUT MD SONOGRAPHY" title="Care starts with understanding." description="Behind every referral is a person with questions. Our approach begins with clear information, thoughtful preparation, and knowing what comes next."/>
+  <section className="section-wrap story-layout section-space" data-reveal><div className="story-photo"><Image src="/md-sonography/images/photography/sonographer.jpg" alt="Healthcare professional working with an ultrasound scanner" fill sizes="(min-width: 900px) 520px, 100vw" className="object-cover"/></div><div className="story-copy"><p className="eyebrow">THE PERSON BEHIND THE REFERRAL</p><h2>More clarity.<br/>Room for your questions.</h2><p>You may want to know what a scan involves, how to prepare, or how your report reaches the right person. These are good places to begin.</p><p>Our examination guides and visit checklists bring those starting points together in plain language.</p><Link href="/md-sonography/patient-information" className="text-link">Find your starting point <ArrowRight size={17}/></Link></div></section>
+  <section className="principles-band section-space"><div className="section-wrap principles-layout"><div data-reveal><p className="eyebrow">WHAT MATTERS</p><h2 className="section-title">Comfort.<br/>Clarity.<br/>Consideration.</h2></div><div>{[['01','Your comfort','Ask about privacy, a companion, accessibility, or anything that would help you attend.'],['02','Clear information','Understand the examination on your referral and the arrangements to confirm before a visit.'],['03','A thoughtful next step','Know how to ask about booking, preparation, and receiving your report.']].map(([n,title,text])=><article key={n} className="principle-row" data-reveal><span>{n}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}</div></div></section>
+  <section className="section-wrap section-space about-finish" data-reveal><div><p className="eyebrow">GET TO KNOW MD SONOGRAPHY</p><h2 className="section-title">The details that build confidence.</h2><p>Clinic profiles, staff qualifications, and equipment details will be published once confirmed. The imagery on this website illustrates ultrasound care.</p></div><div className="quiet-panel"><h3>Before arranging a visit</h3><ul className="check-list">{['Confirm the requested examination','Ask about referrals and preparation','Check availability and appointment arrangements'].map(t=><li key={t}><Check size={18}/>{t}</li>)}</ul><Link href="/md-sonography/services" className="text-link">Explore examination guides <ArrowRight size={17}/></Link></div></section>
+ </Subpage>;
+}

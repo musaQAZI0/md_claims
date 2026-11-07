@@ -1,0 +1,35 @@
+# Page hero images
+
+Created 5 November 2026 with the built-in image_gen tool. Fictional scenes illustrate ultrasound care and do not depict actual staff, premises, or diagnostic findings. Next.js Image supplies optimized delivery. Service-card stock photography is unchanged.
+
+## about-clean-v2.png
+
+Use case: photorealistic-natural. Create a premium clean photographic website hero, wide 16:9 landscape. LEFT 52% is completely empty pale mint-white wall with soft daylight, uncluttered negative space for HTML text. All subjects strictly on RIGHT 48%, heads comfortably below top 18% for wide banner cropping. Soft natural light, calm bright clinic, muted teal and warm white palette matching a modern ultrasound website. Natural anatomy, realistic equipment. No lettering, logos, watermarks, badges, readable patient data, text or graphic overlays. Fictional illustrative clinic, not actual staff or premises. A friendly female sonographer wearing plain teal scrubs seated on the right in a bright consultation room, gently listening to a comfortably dressed adult woman, two people in quiet conversation, no examination.
+
+## services-clean-v2.png
+
+Use case: photorealistic-natural. Create a premium clean photographic website hero, wide 16:9 landscape. LEFT 52% is completely empty pale mint-white wall with soft daylight, uncluttered negative space for HTML text. All subjects strictly on RIGHT 48%, heads comfortably below top 18% for wide banner cropping. Soft natural light, calm bright clinic, muted teal and warm white palette matching a modern ultrasound website. Natural anatomy, realistic equipment. No lettering, logos, watermarks, badges, readable patient data, text or graphic overlays. Fictional illustrative clinic, not actual staff or premises. An elegant modern ultrasound scanner and neatly made examination bed on the right, probes properly docked, grayscale monitor with no readable data, no people, spotless minimal clinical room.
+
+## patient-information-clean-v2.png
+
+Use case: photorealistic-natural. Create a premium clean photographic website hero, wide 16:9 landscape. LEFT 52% is completely empty pale mint-white wall with soft daylight, uncluttered negative space for HTML text. All subjects strictly on RIGHT 48%, heads comfortably below top 18% for wide banner cropping. Soft natural light, calm bright clinic, muted teal and warm white palette matching a modern ultrasound website. Natural anatomy, realistic equipment. No lettering, logos, watermarks, badges, readable patient data, text or graphic overlays. Fictional illustrative clinic, not actual staff or premises. On the right a female healthcare professional in teal scrubs explaining a blank unmarked preparation checklist to a seated adult patient in a cream sweater, calm reassuring conversation at a small desk.
+
+## appointment-clean-v2.png
+
+Use case: photorealistic-natural. Create a premium clean photographic website hero, wide 16:9 landscape. LEFT 52% is completely empty pale mint-white wall with soft daylight, uncluttered negative space for HTML text. All subjects strictly on RIGHT 48%, heads comfortably below top 18% for wide banner cropping. Soft natural light, calm bright clinic, muted teal and warm white palette matching a modern ultrasound website. Natural anatomy, realistic equipment. No lettering, logos, watermarks, badges, readable patient data, text or graphic overlays. Fictional illustrative clinic, not actual staff or premises. On the right a welcoming clinic reception desk with a friendly receptionist in modest professional teal clothing, closed notebook and keyboard, bright airy minimal waiting area, no signs or lettering.
+
+## contact-clean-v2.png
+
+Use case: photorealistic-natural. Create a premium clean photographic website hero, wide 16:9 landscape. LEFT 52% is completely empty pale mint-white wall with soft daylight, uncluttered negative space for HTML text. All subjects strictly on RIGHT 48%, heads comfortably below top 18% for wide banner cropping. Soft natural light, calm bright clinic, muted teal and warm white palette matching a modern ultrasound website. Natural anatomy, realistic equipment. No lettering, logos, watermarks, badges, readable patient data, text or graphic overlays. Fictional illustrative clinic, not actual staff or premises. On the right a friendly clinic receptionist at a clean minimal curved reception desk speaking through a small telephone headset, pale mint background, no visible text, no signs.
+
+## general-clean-v2.png
+
+Use case: photorealistic-natural. Create a premium clean photographic website hero, wide 16:9 landscape. LEFT 52% is completely empty pale mint-white wall with soft daylight, uncluttered negative space for HTML text. All subjects strictly on RIGHT 48%, heads comfortably below top 18% for wide banner cropping. Soft natural light, calm bright clinic, muted teal and warm white palette matching a modern ultrasound website. Natural anatomy, realistic equipment. No lettering, logos, watermarks, badges, readable patient data, text or graphic overlays. Fictional illustrative clinic, not actual staff or premises. On the right a clinician in teal scrubs operating an ultrasound scanner alongside a fully clothed adult patient seated on a clinic examination bed, preparation for general ultrasound, no procedure underway.
+
+## echocardiography-clean-v2.png
+
+Use case: photorealistic-natural. Create a premium clean photographic website hero, wide 16:9 landscape. LEFT 52% is completely empty pale mint-white wall with soft daylight, uncluttered negative space for HTML text. All subjects strictly on RIGHT 48%, heads comfortably below top 18% for wide banner cropping. Soft natural light, calm bright clinic, muted teal and warm white palette matching a modern ultrasound website. Natural anatomy, realistic equipment. No lettering, logos, watermarks, badges, readable patient data, text or graphic overlays. Fictional illustrative clinic, not actual staff or premises. On the right an unoccupied clean cardiac ultrasound room with an echocardiography scanner, neatly docked probes and a plain grayscale sector-shaped scan on its screen, examination bed, no readable data, no people.
+
+## doppler-clean-v2.png
+
+Use case: photorealistic-natural. Create a premium clean photographic website hero, wide 16:9 landscape. LEFT 52% is completely empty pale mint-white wall with soft daylight, uncluttered negative space for HTML text. All subjects strictly on RIGHT 48%, heads comfortably below top 18% for wide banner cropping. Soft natural light, calm bright clinic, muted teal and warm white palette matching a modern ultrasound website. Natural anatomy, realistic equipment. No lettering, logos, watermarks, badges, readable patient data, text or graphic overlays. Fictional illustrative clinic, not actual staff or premises. On the right a modern ultrasound scanner with a subtle red-and-blue color Doppler flow visualization on its monitor, docked linear probe, clean white examination bed, no readable data and no people.
