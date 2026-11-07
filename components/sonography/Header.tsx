@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { BrandMark } from '@/components/ui/BrandMark';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
@@ -19,7 +20,7 @@ export default function Header() {
 
   return <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100">
     <div className="section-wrap h-20 flex items-center justify-between gap-5">
-      <Link href="/md-sonography/" aria-label="MD Sonography home" onClick={() => setOpen(false)}><img src="/md-sonography/brand/logo-v2.svg" alt="MD Sonography" width={360} height={72} className="w-[190px] sm:w-[224px] h-auto" /></Link>
+      <Link href="/md-sonography/" className="flex items-center gap-2.5 shrink-0" aria-label="MD Sonography home" onClick={() => setOpen(false)}><BrandMark /><span className="text-xl font-extrabold tracking-tight text-navy">MD Sonography</span></Link>
       <nav aria-label="Main navigation" className="hidden xl:flex items-center gap-4">
         {links.map(([name, href]) => <Link className="text-sm font-semibold hover:text-teal" href={href} aria-current={(pathname.replace(/\/$/, "") === href.replace(/\/$/, "") || (href !== "/md-sonography/" && pathname.startsWith(href + "/"))) ? "page" : undefined} key={name}>{name}</Link>)}
       </nav>
