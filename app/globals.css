@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root { --navy:#0a1f33; --navy-light:#103654; --medical-blue:#1f6fb2; --teal:#0aa7a5; --teal-dark:#078a88; --soft:#f7fbfd; --border:#dfe9ef; --body:#26384b; --muted:#6b7b8d; }
+:root { --navy:#0a1f33; --navy-light:#103654; --medical-blue:#1f6fb2; --medical-blue-hover:#175d97; --blue-soft:#eaf5fb; --teal:#0aa7a5; --teal-dark:#078a88; --soft:#f7fbfd; --border:#dfe9ef; --body:#26384b; --muted:#6b7b8d; }
 @theme inline { --color-navy:var(--navy); --color-navy-light:var(--navy-light); --color-medical-blue:var(--medical-blue); --color-teal:var(--teal); --color-teal-dark:var(--teal-dark); --color-soft:var(--soft); --color-border:var(--border); --color-body:var(--body); --color-muted:var(--muted); --font-sans:var(--font-manrope); }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
@@ -14,13 +14,13 @@ button, a { -webkit-tap-highlight-color:transparent; }
 .eyebrow-dark { color:#49d5cf; }
 .gateway-card { display:flex; min-height:430px; flex-direction:column; border:1px solid var(--border); border-radius:28px; background:#fff; padding:32px; box-shadow:0 18px 50px rgba(10,31,51,.07); transition:transform .25s,box-shadow .25s,border-color .25s; }
 a.gateway-card:hover { transform:translateY(-5px); border-color:rgba(31,111,178,.4); box-shadow:0 22px 60px rgba(10,31,51,.12); }
-.service-icon { display:flex; height:60px; width:60px; align-items:center; justify-content:center; border-radius:18px; background:#eaf5fb; color:var(--medical-blue); }
+.service-icon { display:flex; height:60px; width:60px; align-items:center; justify-content:center; border-radius:18px; background:var(--blue-soft); color:var(--medical-blue); }
 .service-icon-small { height:48px; width:48px; border-radius:14px; }
 .muted-icon { background:#f1f5f7; color:var(--muted); }
 .button { display:inline-flex; min-height:48px; align-items:center; justify-content:center; gap:9px; border-radius:12px; padding:0 20px; font-size:.875rem; font-weight:800; transition:transform .2s,background .2s,border-color .2s; }
 .button:hover { transform:translateY(-1px); }
 .button-primary { background:var(--medical-blue); color:#fff; box-shadow:0 8px 22px rgba(31,111,178,.2); }
-.button-primary:hover { background:#175d97; }
+.button-primary:hover { background:var(--medical-blue-hover); }
 .button-secondary { border:1px solid var(--border); background:#fff; color:var(--navy); }
 .button-secondary:hover { border-color:#aac6d7; background:var(--soft); }
 .button-light { background:#fff; color:var(--navy); }
@@ -50,7 +50,7 @@ a.gateway-card:hover { transform:translateY(-5px); border-color:rgba(31,111,178,
 .specialties-section { background:var(--soft); } .specialties-section .eyebrow { color:var(--teal-dark); } .specialties-section .section-title { color:var(--navy); } .specialties-section .max-w-2xl > p:last-child { color:var(--muted); } .specialties-grid { display:grid; grid-template-columns:repeat(1,minmax(0,1fr)); gap:18px; } .specialty-card { display:flex; min-height:132px; flex-direction:column; align-items:center; justify-content:center; gap:14px; border-radius:24px; background:#fff; padding:22px 14px; text-align:center; font-size:.98rem; font-weight:800; color:var(--navy); border:1px solid var(--border); box-shadow:0 8px 24px rgba(10,31,51,.06); transition:transform .2s,box-shadow .2s; } .specialty-card svg { height:42px; width:42px; color:#2860c4; } .specialty-card:hover { transform:translateY(-4px); box-shadow:0 16px 30px rgba(10,31,51,.1); }
 .process-grid { display:grid; gap:16px; }
 .process-card { position:relative; border:1px solid var(--border); border-radius:20px; background:#fff; padding:24px; }
-.process-number { display:flex; height:38px; width:38px; align-items:center; justify-content:center; border-radius:11px; background:#eaf5fb; color:var(--medical-blue); font-size:.75rem; font-weight:900; }
+.process-number { display:flex; height:38px; width:38px; align-items:center; justify-content:center; border-radius:11px; background:var(--blue-soft); color:var(--medical-blue); font-size:.75rem; font-weight:900; }
 .cta-panel { display:flex; flex-direction:column; gap:30px; border-radius:28px; background:var(--navy); padding:36px; box-shadow:0 18px 50px rgba(10,31,51,.18); }
 .contact-panel { background:var(--navy); padding:32px; color:#fff; }
 .field-label { display:block; margin-bottom:8px; color:var(--navy); font-size:.82rem; font-weight:800; }

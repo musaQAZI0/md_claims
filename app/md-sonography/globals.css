@@ -1,36 +1,38 @@
-/* Scoped to keep the MD Billing presentation independent. */
-.sonography-site { --navy: #102a43; --teal: #087e87; --font-manrope: var(--font-sora); }
-.sonography-site .bg-pearl { background-color: #f6f8fa; }
-.sonography-site .bg-mint { background-color: #eaf6f5; }
+/* Use the shared MD Claims palette; keep layout styles scoped to Sonography. */
+.sonography-site { --font-manrope: var(--font-sora); }
+.sonography-site .bg-pearl { background-color: var(--soft); }
+.sonography-site .bg-mint { background-color: var(--blue-soft); }
 .sonography-site { scroll-behavior: smooth; scroll-padding-top: 100px; }
-.sonography-site { color: #102a43; background: #fff; -webkit-font-smoothing: antialiased; }
+.sonography-site { color: var(--body); background: #fff; -webkit-font-smoothing: antialiased; }
+.sonography-site main :is(h1, h2, h3) { color: var(--navy); }
+.sonography-site :is(.text-slate-600, .text-slate-500) { color: var(--muted); }
 .sonography-site * { box-sizing: border-box; }
-.sonography-site ::selection { background: #bdebe7; }
+.sonography-site ::selection { background: var(--blue-soft); }
 .sonography-site a,.sonography-site  button { transition: background-color .2s ease, color .2s ease, transform .2s ease; }
-.sonography-site :focus-visible { outline: 3px solid #087e87; outline-offset: 4px; }
+.sonography-site :focus-visible { outline: 3px solid var(--medical-blue); outline-offset: 4px; }
 .sonography-site .section-wrap { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
-.sonography-site .eyebrow { font-size: 11px; font-weight: 800; letter-spacing: .17em; color: #087e87; }
+.sonography-site .eyebrow { font-size: 11px; font-weight: 800; letter-spacing: .17em; color: var(--teal-dark); }
 .sonography-site .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 12px; padding: 14px 20px; font-size: 14px; font-weight: 700; min-height: 48px; }
-.sonography-site .btn-primary { background: linear-gradient(120deg, #087e87, #066a7e); color: white; }
-.sonography-site .btn-primary:hover { background: #075f66; transform: translateY(-1px); }
-.sonography-site .btn-outline { border: 1px solid #087e87; color: #087e87; }
-.sonography-site .btn-outline:hover { background: #eaf6f5; }
+.sonography-site .btn-primary { background: var(--medical-blue); color: white; }
+.sonography-site .btn-primary:hover { background: var(--medical-blue-hover); transform: translateY(-1px); }
+.sonography-site .btn-outline { border: 1px solid var(--medical-blue); color: var(--medical-blue); }
+.sonography-site .btn-outline:hover { background: var(--blue-soft); }
 .sonography-site .photo { object-fit: cover; width: 100%; height: 100%; }
-.sonography-site .skip-link { position: fixed; top: -80px; left: 20px; z-index: 100; background: white; padding: 12px 20px; border: 2px solid #087e87; border-radius: 8px; }
+.sonography-site .skip-link { position: fixed; top: -80px; left: 20px; z-index: 100; background: white; padding: 12px 20px; border: 2px solid var(--medical-blue); border-radius: 8px; }
 .sonography-site .skip-link:focus { top: 12px; }
 .sonography-site .visit-faq { max-width: 800px; margin: 36px auto 0; }
-.sonography-site .visit-faq details { border-bottom: 1px solid #dbe5ea; padding: 22px 0; }
+.sonography-site .visit-faq details { border-bottom: 1px solid var(--border); padding: 22px 0; }
 .sonography-site .visit-faq summary { font-weight: 600; cursor: pointer; line-height: 1.5; list-style: none; display: flex; justify-content: space-between; gap: 24px; }
 .sonography-site .visit-faq summary::-webkit-details-marker { display: none; }
-.sonography-site .visit-faq summary::after { content: '+'; color: #087e87; font-size: 22px; line-height: 1; }
+.sonography-site .visit-faq summary::after { content: '+'; color: var(--medical-blue); font-size: 22px; line-height: 1; }
 .sonography-site .visit-faq details[open] summary::after { content: '\2212'; }
-.sonography-site .visit-faq details p { color: #526375; font-size: 16px; line-height: 1.8; margin-top: 12px; padding-right: 24px; }
+.sonography-site .visit-faq details p { color: var(--body); font-size: 16px; line-height: 1.8; margin-top: 12px; padding-right: 24px; }
 @media (prefers-reduced-motion: reduce) {
   .sonography-site { scroll-behavior: auto; }
   .sonography-site *,.sonography-site  *::before,.sonography-site  *::after { transition: none !important; }
 }
 
-.sonography-site .about-visual { position: relative; overflow: hidden; border-radius: 16px; background: #eaf6f5; }
+.sonography-site .about-visual { position: relative; overflow: hidden; border-radius: 16px; background: var(--blue-soft); }
 .sonography-site .hero-visual { position: relative; overflow: hidden; aspect-ratio: 4 / 3; }
 .sonography-site .about-visual { aspect-ratio: 4 / 3; }
 .sonography-site .hero-image,.sonography-site  .section-image { object-fit: cover; object-position: right center; }
@@ -38,12 +40,12 @@
 
 
 /* Keep photography separate from copy so both remain clear at every viewport. */
-.sonography-site .home-hero { position: relative; overflow: hidden; background: #f3f9f8; border-bottom: 1px solid #e1ecea; }
+.sonography-site .home-hero { position: relative; overflow: hidden; background: var(--soft); border-bottom: 1px solid var(--border); }
 .sonography-site .home-hero-layout { display: grid; gap: 36px; align-items: center; padding-top: 48px; padding-bottom: 48px; }
 .sonography-site .home-hero-copy { min-width: 0; }
 .sonography-site .home-hero-copy h1 { font-size: clamp(36px, 4.3vw, 56px); max-width: 14ch; }
 .sonography-site .home-hero-copy > p:not(.eyebrow) { font-size: 16px; line-height: 1.8; }
-.sonography-site .home-hero .hero-visual { width: 100%; aspect-ratio: 1.12; border-radius: 24px 24px 64px 24px; box-shadow: 0 16px 40px #173f4510; }
+.sonography-site .home-hero .hero-visual { width: 100%; aspect-ratio: 1.12; border-radius: 24px 24px 64px 24px; box-shadow: 0 16px 40px rgba(10,31,51,.06); }
 .sonography-site .home-hero .hero-image { object-position: 42% center; }
 @media (min-width: 1024px) {
  .sonography-site .home-hero-layout { grid-template-columns: 1fr 1.08fr; gap: 64px; min-height: 600px; padding-top: 56px; padding-bottom: 56px; }
@@ -58,40 +60,40 @@
 .sonography-site .page-section { padding: 80px 0; }
 .sonography-site .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
 .sonography-site .section-heading h2 { font-size: clamp(28px, 3vw, 36px); font-weight: 700; line-height: 1.2; margin-bottom: 12px; letter-spacing: -.025em; }
-.sonography-site .section-heading p:not(.eyebrow) { color: #526375; line-height: 1.7; }
+.sonography-site .section-heading p:not(.eyebrow) { color: var(--body); line-height: 1.7; }
 .sonography-site .section-heading .btn { flex-shrink: 0; }
-.sonography-site .content-card { border: 1px solid #e5edf0; background: white; border-radius: 14px; padding: 28px; }
+.sonography-site .content-card { border: 1px solid var(--border); background: white; border-radius: 14px; padding: 28px; }
 .sonography-site .content-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
-.sonography-site .content-card p { font-size: 14px; color: #526375; line-height: 1.8; }
-.sonography-site .service-chip { background: white; border: 1px solid #b5d4d6; border-radius: 999px; padding: 10px 16px; font-size: 13px; font-weight: 600; color: #087e87; }
-.sonography-site .service-chip:hover { background: #dcedeb; }
-.sonography-site nav a[aria-current="page"] { color: #087e87; text-decoration: underline; text-underline-offset: 8px; }
+.sonography-site .content-card p { font-size: 14px; color: var(--body); line-height: 1.8; }
+.sonography-site .service-chip { background: white; border: 1px solid var(--border); border-radius: 999px; padding: 10px 16px; font-size: 13px; font-weight: 600; color: var(--medical-blue); }
+.sonography-site .service-chip:hover { background: var(--border); }
+.sonography-site nav a[aria-current="page"] { color: var(--medical-blue); text-decoration: underline; text-underline-offset: 8px; }
 .sonography-site .home-hero-copy h1 { font-size: clamp(32px, 5vw, 56px); }
 @media (max-width: 767px) { .sonography-site .page-section { padding: 48px 0; } .sonography-site .section-heading { align-items: flex-start; flex-direction: column; } .sonography-site .visit-faq { margin-top: 28px; } }
 
 .sonography-site { font-size: 16px; line-height: 1.6; }
 .sonography-site h1,.sonography-site  h2,.sonography-site  h3 { text-wrap: balance; }
 .sonography-site .eyebrow { font-size: 12px; }
-.sonography-site .hero-note { font-size: 14px; color: #526375; margin-top: 20px; }
-.sonography-site .quick-links { border-bottom: 1px solid #e5edf0; background: white; }
-.sonography-site .quick-link { display: flex; align-items: flex-start; gap: 16px; padding: 28px 20px; border-right: 1px solid #e5edf0; }
+.sonography-site .hero-note { font-size: 14px; color: var(--body); margin-top: 20px; }
+.sonography-site .quick-links { border-bottom: 1px solid var(--border); background: white; }
+.sonography-site .quick-link { display: flex; align-items: flex-start; gap: 16px; padding: 28px 20px; border-right: 1px solid var(--border); }
 .sonography-site .quick-link:first-child { padding-left: 0; }
 .sonography-site .quick-link:last-child { border-right: 0; }
 .sonography-site .quick-link h2 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
-.sonography-site .quick-link p { font-size: 14px; color: #526375; line-height: 1.6; }
-.sonography-site .quick-link:hover { background: #f6fafa; }
-.sonography-site .quick-link-arrow { color: #087e87; flex-shrink: 0; margin-left: auto; margin-top: 4px; }
-.sonography-site .text-link { display: inline-flex; gap: 10px; align-items: center; color: #087e87; font-weight: 700; min-height: 44px; }
+.sonography-site .quick-link p { font-size: 14px; color: var(--body); line-height: 1.6; }
+.sonography-site .quick-link:hover { background: var(--soft); }
+.sonography-site .quick-link-arrow { color: var(--medical-blue); flex-shrink: 0; margin-left: auto; margin-top: 4px; }
+.sonography-site .text-link { display: inline-flex; gap: 10px; align-items: center; color: var(--medical-blue); font-weight: 700; min-height: 44px; }
 .sonography-site .text-link:hover { text-decoration: underline; text-underline-offset: 4px; }
-.sonography-site .service-note { font-size: 14px; color: #526375; margin-top: 24px; }
-.sonography-site .visit-step { padding: 12px 28px 12px 0; border-right: 1px solid #dbe5ea; }
+.sonography-site .service-note { font-size: 14px; color: var(--body); margin-top: 24px; }
+.sonography-site .visit-step { padding: 12px 28px 12px 0; border-right: 1px solid var(--border); }
 .sonography-site .visit-step:last-child { border-right: 0; }
-.sonography-site .step-number { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #e0efee; color: #087e87; font-weight: 700; }
+.sonography-site .step-number { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: var(--blue-soft); color: var(--medical-blue); font-weight: 700; }
 .sonography-site .visit-step p,.sonography-site  .content-card p { font-size: 16px; }
 @media (max-width: 767px) {
- .sonography-site .quick-link,.sonography-site  .quick-link:first-child { padding: 22px 0; border-right: 0; border-bottom: 1px solid #e5edf0; }
+ .sonography-site .quick-link,.sonography-site  .quick-link:first-child { padding: 22px 0; border-right: 0; border-bottom: 1px solid var(--border); }
  .sonography-site .quick-link:last-child { border-bottom: 0; }
- .sonography-site .visit-step { border-right: 0; border-bottom: 1px solid #dbe5ea; padding: 8px 0 24px; }
+ .sonography-site .visit-step { border-right: 0; border-bottom: 1px solid var(--border); padding: 8px 0 24px; }
  .sonography-site .visit-step:last-child { border-bottom: 0; }
  .sonography-site .hero-note { max-width: 32ch; }
 }
@@ -99,35 +101,35 @@
  .sonography-site .btn { padding: 13px 17px; }
 }
 
-.sonography-site .examination-guides { border-top: 1px solid #dbe5ea; }
-.sonography-site .examination-guide { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; padding: 40px 0; border-bottom: 1px solid #dbe5ea; scroll-margin-top: 100px; }
+.sonography-site .examination-guides { border-top: 1px solid var(--border); }
+.sonography-site .examination-guide { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; padding: 40px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 100px; }
 @media (max-width: 767px) { .sonography-site .examination-guide { grid-template-columns: 1fr; gap: 24px; padding: 32px 0; } }
 
-.sonography-site .breadcrumb { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 18px; padding-bottom: 18px; font-size: 14px; color: #526375; }
-.sonography-site .breadcrumb a:hover { color: #087e87; text-decoration: underline; }
-.sonography-site .guide-header { background: #eaf6f5; padding: 56px 0; }
+.sonography-site .breadcrumb { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 18px; padding-bottom: 18px; font-size: 14px; color: var(--body); }
+.sonography-site .breadcrumb a:hover { color: var(--medical-blue); text-decoration: underline; }
+.sonography-site .guide-header { background: var(--blue-soft); padding: 56px 0; }
 .sonography-site .guide-header h1 { font-size: clamp(32px, 4.5vw, 52px); font-weight: 700; line-height: 1.15; letter-spacing: -.03em; max-width: 780px; }
-.sonography-site .guide-header > div > p:last-of-type { max-width: 650px; margin-top: 20px; color: #526375; font-size: 18px; }
+.sonography-site .guide-header > div > p:last-of-type { max-width: 650px; margin-top: 20px; color: var(--body); font-size: 18px; }
 .sonography-site .detail-layout { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 64px; align-items: start; }
 .sonography-site .guide-copy h2 { font-size: 26px; font-weight: 700; line-height: 1.3; margin: 32px 0 16px; }
 .sonography-site .guide-copy h2:first-child { margin-top: 0; }
-.sonography-site .guide-copy p,.sonography-site  .guide-copy li { color: #526375; line-height: 1.85; }
+.sonography-site .guide-copy p,.sonography-site  .guide-copy li { color: var(--body); line-height: 1.85; }
 .sonography-site .guide-copy ul { padding-left: 22px; list-style: disc; }
 .sonography-site .guide-copy li { margin-bottom: 12px; }
-.sonography-site .guide-link { display: block; padding: 24px; border: 1px solid #dbe5ea; border-radius: 14px; background: white; }
-.sonography-site .guide-link:hover { background: #f3f9f8; border-color: #087e87; }
+.sonography-site .guide-link { display: block; padding: 24px; border: 1px solid var(--border); border-radius: 14px; background: white; }
+.sonography-site .guide-link:hover { background: var(--soft); border-color: var(--medical-blue); }
 .sonography-site .guide-link h3 { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-weight: 700; margin-bottom: 8px; }
-.sonography-site .guide-link h3 svg { flex-shrink: 0; color: #087e87; }
-.sonography-site .guide-link p { color: #526375; font-size: 15px; }
+.sonography-site .guide-link h3 svg { flex-shrink: 0; color: var(--medical-blue); }
+.sonography-site .guide-link p { color: var(--body); font-size: 15px; }
 .sonography-site aside .grid { grid-template-columns: 1fr; }
-.sonography-site .scan-summary { padding: 28px; background: #f6f8fa; border: 1px solid #e5edf0; border-radius: 16px; }
+.sonography-site .scan-summary { padding: 28px; background: var(--soft); border: 1px solid var(--border); border-radius: 16px; }
 .sonography-site .scan-summary dt { font-weight: 700; margin-top: 18px; font-size: 14px; }
-.sonography-site .scan-summary dd { color: #526375; font-size: 15px; margin-top: 4px; }
-.sonography-site .source-note { border-top: 1px solid #dbe5ea; margin-top: 40px; padding-top: 24px; font-size: 14px; }
-.sonography-site .source-note a { color: #087e87; text-decoration: underline; }
+.sonography-site .scan-summary dd { color: var(--body); font-size: 15px; margin-top: 4px; }
+.sonography-site .source-note { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 24px; font-size: 14px; }
+.sonography-site .source-note a { color: var(--medical-blue); text-decoration: underline; }
 .sonography-site .faq-group { margin-bottom: 56px; scroll-margin-top: 110px; }
 .sonography-site .faq-group .visit-faq { margin-top: 16px; }
-.sonography-site .footer-links { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; font-size: 14px; color: #cbd5e1; }
+.sonography-site .footer-links { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--border); }
 .sonography-site .footer-links h2 { font-size: 16px; color: white; font-weight: 700; margin-bottom: 6px; }
 .sonography-site .footer-links a:hover { color: white; text-decoration: underline; }
 @media(max-width: 767px) { .sonography-site .detail-layout { grid-template-columns: minmax(0, 1fr); gap: 36px; } .sonography-site .guide-header { padding: 40px 0; } }
@@ -147,42 +149,42 @@
 /* Service discovery */
 .sonography-site .service-section { background: #fff; }
 .sonography-site .service-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
-.sonography-site .service-card { min-width: 0; border: 1px solid #dfe9e9; border-radius: 18px; overflow: hidden; background: #fff; transition: box-shadow .2s ease, border-color .2s ease; }
-.sonography-site .service-card:hover,.sonography-site  .service-card:focus-within { border-color: #8cbcb9; box-shadow: 0 14px 32px #102a430c; }
+.sonography-site .service-card { min-width: 0; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; background: #fff; transition: box-shadow .2s ease, border-color .2s ease; }
+.sonography-site .service-card:hover,.sonography-site  .service-card:focus-within { border-color: var(--border); box-shadow: 0 14px 32px rgba(10,31,51,.05); }
 .sonography-site .service-card-link { display: flex; flex-direction: column; height: 100%; }
 .sonography-site .service-card-link:focus-visible { outline-offset: -4px; }
-.sonography-site .service-card-photo { position: relative; height: 174px; overflow: hidden; background: #edf4f3; }
+.sonography-site .service-card-photo { position: relative; height: 174px; overflow: hidden; background: var(--blue-soft); }
 .sonography-site .service-card-photo img { object-position: center 42%; }
 .sonography-site .service-card-body { display: flex; flex-direction: column; flex: 1; padding: 22px; }
-.sonography-site .service-card-meta { display: flex; justify-content: space-between; align-items: center; color: #087e87; margin-bottom: 16px; }
-.sonography-site .service-card-meta span { font-size: 12px; color: #647580; font-variant-numeric: tabular-nums; }
+.sonography-site .service-card-meta { display: flex; justify-content: space-between; align-items: center; color: var(--medical-blue); margin-bottom: 16px; }
+.sonography-site .service-card-meta span { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .sonography-site .service-card h3 { font-size: 18px; line-height: 1.4; font-weight: 700; margin-bottom: 12px; }
-.sonography-site .service-card p { font-size: 14px; color: #526375; line-height: 1.75; margin-bottom: 20px; }
-.sonography-site .service-card-action { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; padding-top: 16px; border-top: 1px solid #e7eeee; font-size: 13px; font-weight: 700; color: #087e87; min-height: 44px; }
+.sonography-site .service-card p { font-size: 14px; color: var(--body); line-height: 1.75; margin-bottom: 20px; }
+.sonography-site .service-card-action { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border); font-size: 13px; font-weight: 700; color: var(--medical-blue); min-height: 44px; }
 .sonography-site .service-card-action svg { flex-shrink: 0; }
-.sonography-site .approach-section { background: #f3f8f7; }
+.sonography-site .approach-section { background: var(--soft); }
 .sonography-site .approach-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
 .sonography-site .approach-layout .about-visual { aspect-ratio: 1; border-radius: 24px 64px 24px 24px; }
 .sonography-site .approach-list { display: flex; flex-direction: column; gap: 22px; }
 .sonography-site .approach-list li { display: flex; align-items: flex-start; gap: 14px; }
-.sonography-site .approach-list svg { color: #087e87; flex-shrink: 0; margin-top: 4px; }
+.sonography-site .approach-list svg { color: var(--medical-blue); flex-shrink: 0; margin-top: 4px; }
 .sonography-site .approach-list h3 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
-.sonography-site .approach-list p { color: #526375; font-size: 14px; line-height: 1.7; }
+.sonography-site .approach-list p { color: var(--body); font-size: 14px; line-height: 1.7; }
 .sonography-site .home-faq-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 80px; }
 .sonography-site .home-faq-layout .visit-faq { margin: 0; width: 100%; }
 .sonography-site .home-faq-layout .visit-faq details:first-child { padding-top: 0; }
-.sonography-site .next-step-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; border: 1px solid #dce9e7; background: #eef6f4; border-radius: 24px; padding: 48px; }
-.sonography-site .next-step-panel p:not(.eyebrow) { color: #526375; line-height: 1.8; }
+.sonography-site .next-step-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; border: 1px solid var(--border); background: var(--blue-soft); border-radius: 24px; padding: 48px; }
+.sonography-site .next-step-panel p:not(.eyebrow) { color: var(--body); line-height: 1.8; }
 .sonography-site .next-step-links { display: flex; flex-direction: column; }
-.sonography-site .next-step-links a { display: flex; align-items: center; gap: 14px; padding: 22px 0; border-bottom: 1px solid #cbdedb; font-weight: 600; font-size: 14px; }
+.sonography-site .next-step-links a { display: flex; align-items: center; gap: 14px; padding: 22px 0; border-bottom: 1px solid var(--border); font-weight: 600; font-size: 14px; }
 .sonography-site .next-step-links a:last-child { border-bottom: 0; }
-.sonography-site .next-step-links svg { color: #087e87; flex-shrink: 0; }
+.sonography-site .next-step-links svg { color: var(--medical-blue); flex-shrink: 0; }
 .sonography-site .next-step-links svg:last-child { margin-left: auto; }
-.sonography-site .next-step-links a:hover { color: #087e87; }
-.sonography-site .menu-toggle { display: inline-flex; align-items: center; gap: 7px; min-width: 76px; min-height: 44px; justify-content: center; border: 1px solid #dbe5ea; border-radius: 10px; font-size: 13px; font-weight: 600; }
-.sonography-site .mobile-navigation { padding: 8px 22px 20px; max-height: calc(100dvh - 80px); overflow-y: auto; border-top: 1px solid #e5edf0; background: white; }
+.sonography-site .next-step-links a:hover { color: var(--medical-blue); }
+.sonography-site .menu-toggle { display: inline-flex; align-items: center; gap: 7px; min-width: 76px; min-height: 44px; justify-content: center; border: 1px solid var(--border); border-radius: 10px; font-size: 13px; font-weight: 600; }
+.sonography-site .mobile-navigation { padding: 8px 22px 20px; max-height: calc(100dvh - 80px); overflow-y: auto; border-top: 1px solid var(--border); background: white; }
 .sonography-site .mobile-navigation a { display: block; min-height: 48px; padding: 13px 12px; border-radius: 8px; }
-.sonography-site .mobile-navigation a:hover,.sonography-site  .mobile-navigation a[aria-current="page"] { background: #eaf6f5; }
+.sonography-site .mobile-navigation a:hover,.sonography-site  .mobile-navigation a[aria-current="page"] { background: var(--blue-soft); }
 @media (min-width: 1280px) { .sonography-site .menu-toggle { display: none; } }
 @media (max-width: 1023px) { .sonography-site .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sonography-site .approach-layout,.sonography-site  .home-faq-layout { gap: 36px; } .sonography-site .next-step-panel { gap: 36px; padding: 32px; } }
 @media (max-width: 767px) { .sonography-site .approach-layout,.sonography-site  .home-faq-layout,.sonography-site  .next-step-panel { grid-template-columns: minmax(0, 1fr); } .sonography-site .approach-layout .about-visual { aspect-ratio: 4 / 3; } .sonography-site .next-step-panel { padding: 26px; gap: 24px; } .sonography-site .home-faq-layout .visit-faq details:first-child { padding-top: 8px; } }
@@ -190,7 +192,7 @@
 
 
 /* Homepage banner: live text over the quiet left side, image subjects on the right. */
-.sonography-site .hero-panoramic { background: #e9f1ed; }
+.sonography-site .hero-panoramic { background: var(--blue-soft); }
 .sonography-site .hero-panoramic .home-hero-layout { position: relative; isolation: isolate; }
 .sonography-site .hero-panoramic .home-hero-copy { position: relative; z-index: 2; }
 .sonography-site .hero-panoramic .home-hero-copy h1 { max-width: 13ch; }
@@ -200,7 +202,7 @@
  .sonography-site .hero-panoramic .home-hero-copy { width: 45%; padding-right: 20px; }
  .sonography-site .hero-panoramic .hero-visual { position: absolute; z-index: 0; top: 0; bottom: 0; left: calc((min(100vw, 1200px) - 100vw) / 2); width: 100vw; aspect-ratio: auto; }
  .sonography-site .hero-panoramic .hero-image { object-fit: cover; object-position: 58% 25%; }
- .sonography-site .hero-panoramic .hero-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #edf4ef 0%, #edf4efed 22%, #edf4efb0 36%, transparent 53%); }
+ .sonography-site .hero-panoramic .hero-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, var(--blue-soft) 0%, color-mix(in srgb, var(--soft) 93%, transparent) 22%, color-mix(in srgb, var(--soft) 69%, transparent) 36%, transparent 53%); }
 }
 @media (max-width: 1023px) {
  .sonography-site .hero-panoramic .home-hero-layout { gap: 30px; padding-bottom: 0; }
@@ -213,12 +215,12 @@
 }
 
 /* Compact inner pages keep the information close to the top. */
-.sonography-site .page-intro { padding: 48px 0 40px; background: #f6f9f8; border-bottom: 1px solid #e5ecea; }
+.sonography-site .page-intro { padding: 48px 0 40px; background: var(--soft); border-bottom: 1px solid var(--border); }
 .sonography-site .page-intro h1 { max-width: 900px; margin: 14px 0 16px; font-size: clamp(30px, 4vw, 46px); font-weight: 700; letter-spacing: -.035em; line-height: 1.18; overflow-wrap: break-word; }
-.sonography-site .page-intro-description { max-width: 720px; color: #526375; line-height: 1.8; }
+.sonography-site .page-intro-description { max-width: 720px; color: var(--body); line-height: 1.8; }
 .sonography-site .page-intro-actions { display: flex; flex-wrap: wrap; align-items: center; column-gap: 28px; row-gap: 4px; margin-top: 18px; }
-.sonography-site .page-intro-secondary { display: inline-flex; align-items: center; min-height: 44px; color: #526375; font-size: 14px; font-weight: 600; }
-.sonography-site .page-intro-secondary:hover { color: #087e87; text-decoration: underline; text-underline-offset: 4px; }
+.sonography-site .page-intro-secondary { display: inline-flex; align-items: center; min-height: 44px; color: var(--body); font-size: 14px; font-weight: 600; }
+.sonography-site .page-intro-secondary:hover { color: var(--medical-blue); text-decoration: underline; text-underline-offset: 4px; }
 @media (max-width: 639px) { .sonography-site .page-intro { padding: 32px 0 28px; } .sonography-site .page-intro-actions { column-gap: 20px; } }
 
 /* One short entrance per route; content is visible without JavaScript. */
@@ -236,163 +238,163 @@
 }
 
 /* Purpose-led inner pages */
-.sonography-site .subpage { --subtle: #f2f6f4; --rule: #dce6e3; padding-bottom: 32px; }
+.sonography-site .subpage { --subtle: var(--soft); --rule: var(--border); padding-bottom: 32px; }
 .sonography-site .subpage p { text-wrap: pretty; }
 .sonography-site .section-space { padding-top: 56px; padding-bottom: 56px; }
 .sonography-site .editorial-heading { padding-top: 52px; padding-bottom: 44px; border-bottom: 1px solid var(--rule); }
 .sonography-site .editorial-heading-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 72px; align-items: end; margin-top: 22px; }
 .sonography-site .editorial-heading h1 { font-size: clamp(34px, 4.3vw, 54px); font-weight: 600; letter-spacing: -.045em; line-height: 1.15; max-width: 17ch; overflow-wrap: break-word; }
-.sonography-site .editorial-description { max-width: 540px; color: #526375; font-size: 16px; line-height: 1.85; }
+.sonography-site .editorial-description { max-width: 540px; color: var(--body); font-size: 16px; line-height: 1.85; }
 .sonography-site .section-title { font-size: clamp(27px, 3.2vw, 38px); font-weight: 600; letter-spacing: -.035em; line-height: 1.25; margin: 14px 0 24px; }
 .sonography-site .subpage .text-link { font-size: 14px; }
 .sonography-site .subpage .quiet-panel { border-radius: 16px; padding: 32px; background: var(--subtle); }
 .sonography-site .quiet-panel h2,.sonography-site  .quiet-panel h3 { font-weight: 600; font-size: 22px; line-height: 1.4; margin: 12px 0 16px; }
-.sonography-site .quiet-panel p { color: #526375; line-height: 1.8; }
-.sonography-site .small-note { font-size: 13px; line-height: 1.8; color: #647580; }
+.sonography-site .quiet-panel p { color: var(--body); line-height: 1.8; }
+.sonography-site .small-note { font-size: 13px; line-height: 1.8; color: var(--muted); }
 .sonography-site .help-strip { display: flex; gap: 40px; justify-content: space-between; align-items: center; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 32px 0; }
 .sonography-site .help-strip h2 { font-size: 25px; font-weight: 600; letter-spacing: -.025em; margin: 12px 0; }
-.sonography-site .help-strip p:not(.eyebrow) { color: #526375; max-width: 650px; line-height: 1.8; font-size: 14px; }
+.sonography-site .help-strip p:not(.eyebrow) { color: var(--body); max-width: 650px; line-height: 1.8; font-size: 14px; }
 .sonography-site .help-strip > a { flex-shrink: 0; }
 /* About: editorial story and principles */
 .sonography-site .story-layout { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 80px; }
 .sonography-site .story-photo { position: relative; aspect-ratio: 1.05; border-radius: 4px 48px 4px 4px; overflow: hidden; background: var(--subtle); }
 .sonography-site .story-copy h2 { font-size: clamp(28px, 3vw, 38px); line-height: 1.3; font-weight: 600; letter-spacing: -.03em; margin: 18px 0 24px; }
-.sonography-site .story-copy > p:not(.eyebrow) { color: #526375; margin-bottom: 16px; line-height: 1.85; }
-.sonography-site .principles-band { background: #edf4f1; }
+.sonography-site .story-copy > p:not(.eyebrow) { color: var(--body); margin-bottom: 16px; line-height: 1.85; }
+.sonography-site .principles-band { background: var(--blue-soft); }
 .sonography-site .principles-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 100px; }
-.sonography-site .principle-row { display: flex; gap: 26px; padding: 26px 0; border-bottom: 1px solid #d0dfda; }
+.sonography-site .principle-row { display: flex; gap: 26px; padding: 26px 0; border-bottom: 1px solid var(--border); }
 .sonography-site .principle-row:first-child { padding-top: 0; }
-.sonography-site .principle-row > span { color: #087e87; font-size: 13px; padding-top: 5px; }
+.sonography-site .principle-row > span { color: var(--medical-blue); font-size: 13px; padding-top: 5px; }
 .sonography-site .principle-row h3 { font-size: 21px; font-weight: 600; margin-bottom: 10px; }
-.sonography-site .principle-row p { color: #526375; line-height: 1.8; font-size: 15px; }
+.sonography-site .principle-row p { color: var(--body); line-height: 1.8; font-size: 15px; }
 .sonography-site .about-finish { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
-.sonography-site .about-finish > div > p:not(.eyebrow) { line-height: 1.85; color: #526375; }
+.sonography-site .about-finish > div > p:not(.eyebrow) { line-height: 1.85; color: var(--body); }
 .sonography-site .check-list { margin: 22px 0; }
-.sonography-site .check-list li { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; color: #526375; font-size: 14px; }
-.sonography-site .check-list svg { flex-shrink: 0; color: #087e87; margin-top: 3px; }
+.sonography-site .check-list li { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; color: var(--body); font-size: 14px; }
+.sonography-site .check-list svg { flex-shrink: 0; color: var(--medical-blue); margin-top: 3px; }
 /* Services: anchored directory and large examination rows */
 .sonography-site .catalog-layout { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 64px; align-items: start; }
 .sonography-site .directory-sidebar,.sonography-site  .reading-sidebar,.sonography-site  .faq-controls { position: sticky; top: 110px; }
 .sonography-site .directory-sidebar nav,.sonography-site  .reading-sidebar nav { display: flex; flex-direction: column; margin: 18px 0 24px; }
 .sonography-site .directory-sidebar nav a,.sonography-site  .reading-sidebar nav a { display: flex; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); font-size: 13px; font-weight: 600; }
-.sonography-site .directory-sidebar nav span,.sonography-site  .reading-sidebar nav span { color: #087e87; font-size: 11px; padding-top: 2px; }
-.sonography-site .directory-sidebar nav a:hover,.sonography-site  .reading-sidebar nav a:hover { color: #087e87; }
+.sonography-site .directory-sidebar nav span,.sonography-site  .reading-sidebar nav span { color: var(--medical-blue); font-size: 11px; padding-top: 2px; }
+.sonography-site .directory-sidebar nav a:hover,.sonography-site  .reading-sidebar nav a:hover { color: var(--medical-blue); }
 .sonography-site .catalog-row { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; padding: 32px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 110px; }
 .sonography-site .catalog-row:first-child { padding-top: 0; }
-.sonography-site .catalog-number { color: #087e87; display: flex; gap: 18px; align-items: center; font-size: 12px; }
+.sonography-site .catalog-number { color: var(--medical-blue); display: flex; gap: 18px; align-items: center; font-size: 12px; }
 .sonography-site .catalog-row h2 { font-size: 27px; font-weight: 600; line-height: 1.3; letter-spacing: -.03em; margin: 20px 0 12px; }
-.sonography-site .catalog-row p { color: #526375; line-height: 1.8; font-size: 14px; margin-bottom: 20px; }
+.sonography-site .catalog-row p { color: var(--body); line-height: 1.8; font-size: 14px; margin-bottom: 20px; }
 .sonography-site .catalog-photo { position: relative; min-height: 230px; border-radius: 12px; overflow: hidden; background: var(--subtle); }
 .sonography-site .catalog-photo:focus-visible { outline-offset: 4px; }
 /* Patient hub: before / during / after */
 .sonography-site .stage-navigation { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); padding-top: 26px; gap: 24px; }
-.sonography-site .stage-navigation a { display: flex; align-items: center; gap: 12px; padding: 16px 0; font-size: 14px; font-weight: 600; border-bottom: 2px solid #cddfd8; }
-.sonography-site .stage-navigation a > span { color: #087e87; font-size: 12px; }
-.sonography-site .stage-navigation svg { margin-left: auto; flex-shrink: 0; color: #087e87; }
-.sonography-site .stage-navigation a:hover { border-color: #087e87; color: #087e87; }
+.sonography-site .stage-navigation a { display: flex; align-items: center; gap: 12px; padding: 16px 0; font-size: 14px; font-weight: 600; border-bottom: 2px solid var(--border); }
+.sonography-site .stage-navigation a > span { color: var(--medical-blue); font-size: 12px; }
+.sonography-site .stage-navigation svg { margin-left: auto; flex-shrink: 0; color: var(--medical-blue); }
+.sonography-site .stage-navigation a:hover { border-color: var(--medical-blue); color: var(--medical-blue); }
 .sonography-site .journey-row { display: grid; grid-template-columns: 70px 1fr 1fr; gap: 28px; padding: 40px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 100px; }
 .sonography-site .journey-row:first-child { padding-top: 0; }
-.sonography-site .journey-marker span { display: flex; width: 48px; height: 48px; align-items: center; justify-content: center; background: #edf4f1; border-radius: 50%; color: #087e87; font-size: 14px; }
+.sonography-site .journey-marker span { display: flex; width: 48px; height: 48px; align-items: center; justify-content: center; background: var(--blue-soft); border-radius: 50%; color: var(--medical-blue); font-size: 14px; }
 .sonography-site .journey-copy h2 { font-size: 28px; font-weight: 600; letter-spacing: -.03em; margin: 16px 0 12px; }
-.sonography-site .journey-copy p { color: #526375; max-width: 370px; line-height: 1.8; font-size: 15px; margin-bottom: 12px; }
-.sonography-site .journey-checklist { background: #f4f7f5; border-radius: 12px; padding: 24px 28px; align-self: center; }
-.sonography-site .journey-checklist li { display: flex; gap: 12px; font-size: 14px; color: #526375; padding: 12px 0; }
-.sonography-site .journey-checklist svg { flex-shrink: 0; color: #087e87; margin-top: 3px; }
+.sonography-site .journey-copy p { color: var(--body); max-width: 370px; line-height: 1.8; font-size: 15px; margin-bottom: 12px; }
+.sonography-site .journey-checklist { background: var(--soft); border-radius: 12px; padding: 24px 28px; align-self: center; }
+.sonography-site .journey-checklist li { display: flex; gap: 12px; font-size: 14px; color: var(--body); padding: 12px 0; }
+.sonography-site .journey-checklist svg { flex-shrink: 0; color: var(--medical-blue); margin-top: 3px; }
 .sonography-site .patient-note-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 /* Contact: information directory with resource panel */
 .sonography-site .contact-layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 72px; align-items: start; }
 .sonography-site .section-label { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
 .sonography-site .section-label h2 { font-size: 21px; font-weight: 600; }
-.sonography-site .status-pill { display: inline-flex; background: #e7f0eb; border: 1px solid #cee0d5; border-radius: 99px; color: #346b59; padding: 5px 10px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+.sonography-site .status-pill { display: inline-flex; background: var(--blue-soft); border: 1px solid var(--border); border-radius: 99px; color: var(--medical-blue); padding: 5px 10px; font-size: 11px; font-weight: 600; white-space: nowrap; }
 .sonography-site .contact-row { display: flex; gap: 22px; padding: 26px 0; border-bottom: 1px solid var(--rule); }
-.sonography-site .contact-row > svg { color: #087e87; flex-shrink: 0; margin-top: 4px; }
+.sonography-site .contact-row > svg { color: var(--medical-blue); flex-shrink: 0; margin-top: 4px; }
 .sonography-site .contact-row h3 { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
-.sonography-site .contact-row p { color: #526375; font-size: 15px; }
-.sonography-site .contact-row small { display: block; color: #647580; font-size: 12px; margin-top: 8px; }
-.sonography-site .contact-help { padding: 36px; background: #edf4f1; border-radius: 18px; }
-.sonography-site .contact-help > svg { color: #087e87; margin-bottom: 28px; }
+.sonography-site .contact-row p { color: var(--body); font-size: 15px; }
+.sonography-site .contact-row small { display: block; color: var(--muted); font-size: 12px; margin-top: 8px; }
+.sonography-site .contact-help { padding: 36px; background: var(--blue-soft); border-radius: 18px; }
+.sonography-site .contact-help > svg { color: var(--medical-blue); margin-bottom: 28px; }
 .sonography-site .contact-help h2 { font-size: 30px; font-weight: 600; line-height: 1.3; letter-spacing: -.03em; margin: 16px 0; }
-.sonography-site .contact-help > p:not(.eyebrow) { color: #526375; font-size: 14px; line-height: 1.9; }
+.sonography-site .contact-help > p:not(.eyebrow) { color: var(--body); font-size: 14px; line-height: 1.9; }
 .sonography-site .contact-help nav { margin-top: 26px; }
-.sonography-site .contact-help nav a { display: flex; gap: 14px; justify-content: space-between; align-items: center; padding: 18px 0; border-top: 1px solid #ccddd5; font-size: 13px; font-weight: 600; }
-.sonography-site .contact-help nav a svg { color: #087e87; flex-shrink: 0; }
+.sonography-site .contact-help nav a { display: flex; gap: 14px; justify-content: space-between; align-items: center; padding: 18px 0; border-top: 1px solid var(--border); font-size: 13px; font-weight: 600; }
+.sonography-site .contact-help nav a svg { color: var(--medical-blue); flex-shrink: 0; }
 /* Appointments: preparation flow and honest booking status */
 .sonography-site .appointment-layout { display: grid; grid-template-columns: 1fr .9fr; gap: 100px; align-items: start; }
 .sonography-site .booking-steps { margin: 30px 0 24px; }
 .sonography-site .booking-steps li { display: flex; gap: 22px; padding: 24px 0; border-bottom: 1px solid var(--rule); }
-.sonography-site .booking-steps li > span { color: #087e87; font-size: 12px; padding-top: 6px; }
+.sonography-site .booking-steps li > span { color: var(--medical-blue); font-size: 12px; padding-top: 6px; }
 .sonography-site .booking-steps h3 { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
-.sonography-site .booking-steps p { color: #526375; font-size: 14px; line-height: 1.9; }
-.sonography-site .booking-status { padding: 36px; border: 1px solid #d5e4dc; border-radius: 18px; background: #f3f7f4; }
-.sonography-site .booking-status-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 36px; color: #087e87; }
+.sonography-site .booking-steps p { color: var(--body); font-size: 14px; line-height: 1.9; }
+.sonography-site .booking-status { padding: 36px; border: 1px solid var(--border); border-radius: 18px; background: var(--soft); }
+.sonography-site .booking-status-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 36px; color: var(--medical-blue); }
 .sonography-site .booking-status h2 { font-size: 30px; font-weight: 600; letter-spacing: -.03em; line-height: 1.3; margin-bottom: 18px; }
-.sonography-site .booking-status > p { color: #526375; line-height: 1.9; font-size: 14px; }
-.sonography-site .booking-divider { display: flex; gap: 12px; border-top: 1px solid #d5e2da; padding-top: 24px; margin: 28px 0; color: #526375; font-size: 13px; }
-.sonography-site .booking-divider svg { color: #087e87; flex-shrink: 0; }
+.sonography-site .booking-status > p { color: var(--body); line-height: 1.9; font-size: 14px; }
+.sonography-site .booking-divider { display: flex; gap: 12px; border-top: 1px solid var(--border); padding-top: 24px; margin: 28px 0; color: var(--body); font-size: 13px; }
+.sonography-site .booking-divider svg { color: var(--medical-blue); flex-shrink: 0; }
 .sonography-site .booking-status > .btn { width: 100%; }
 .sonography-site .selected-scan { display: flex; align-items: center; gap: 12px; background: white; border: 1px solid var(--rule); border-radius: 10px; padding: 18px; margin-top: 24px; }
-.sonography-site .selected-scan > svg { color: #087e87; flex-shrink: 0; }
-.sonography-site .selected-scan span { display: block; font-size: 9px; color: #647580; letter-spacing: .08em; }
+.sonography-site .selected-scan > svg { color: var(--medical-blue); flex-shrink: 0; }
+.sonography-site .selected-scan span { display: block; font-size: 9px; color: var(--muted); letter-spacing: .08em; }
 .sonography-site .selected-scan strong { display: block; font-size: 14px; font-weight: 600; margin-top: 6px; }
 /* FAQ: search and topics */
 .sonography-site .faq-workspace { display: grid; grid-template-columns: 270px minmax(0,1fr); gap: 80px; align-items: start; }
-.sonography-site .question-search { display: flex; align-items: center; gap: 8px; margin-top: 14px; border: 1px solid #cbdad3; border-radius: 10px; padding: 0 12px; min-height: 48px; }
-.sonography-site .question-search > svg { color: #087e87; flex-shrink: 0; }
+.sonography-site .question-search { display: flex; align-items: center; gap: 8px; margin-top: 14px; border: 1px solid var(--border); border-radius: 10px; padding: 0 12px; min-height: 48px; }
+.sonography-site .question-search > svg { color: var(--medical-blue); flex-shrink: 0; }
 .sonography-site .question-search input { min-width: 0; width: 100%; background: transparent; padding: 12px 0; font-size: 13px; }
 .sonography-site .question-search input:focus-visible { outline: 0; }
-.sonography-site .question-search:focus-within { outline: 2px solid #087e87; outline-offset: 2px; }
+.sonography-site .question-search:focus-within { outline: 2px solid var(--medical-blue); outline-offset: 2px; }
 .sonography-site .question-search input::-webkit-search-cancel-button { display: none; }
 .sonography-site .question-search button { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; min-width: 30px; }
 .sonography-site .topic-filters { display: flex; flex-direction: column; gap: 6px; margin-top: 16px; }
 .sonography-site .topic-filters button { text-align: left; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 14px 12px; border-radius: 8px; font-size: 13px; font-weight: 500; }
-.sonography-site .topic-filters button[aria-pressed="true"] { background: #eaf3ed; color: #087e87; font-weight: 600; }
-.sonography-site .topic-filters button:hover { background: #f1f5f3; }
-.sonography-site .topic-filters button span { font-size: 11px; color: #647580; }
-.sonography-site .results-count { color: #647580; font-size: 12px; margin-bottom: 22px; }
+.sonography-site .topic-filters button[aria-pressed="true"] { background: var(--blue-soft); color: var(--medical-blue); font-weight: 600; }
+.sonography-site .topic-filters button:hover { background: var(--soft); }
+.sonography-site .topic-filters button span { font-size: 11px; color: var(--muted); }
+.sonography-site .results-count { color: var(--muted); font-size: 12px; margin-bottom: 22px; }
 .sonography-site .faq-result-group { margin-bottom: 44px; }
 .sonography-site .faq-result-group .visit-faq { margin: 0; max-width: none; }
 .sonography-site .faq-result-group .visit-faq summary { font-size: 15px; }
 .sonography-site .faq-result-group .visit-faq details p { font-size: 14px; }
 .sonography-site .faq-result-group .section-label { padding-bottom: 16px; }
-.sonography-site .faq-result-group .section-label > span { font-size: 12px; color: #087e87; }
-.sonography-site .empty-questions { background: #f3f7f4; padding: 40px; border-radius: 12px; }
+.sonography-site .faq-result-group .section-label > span { font-size: 12px; color: var(--medical-blue); }
+.sonography-site .empty-questions { background: var(--soft); padding: 40px; border-radius: 12px; }
 .sonography-site .empty-questions h2 { font-size: 23px; font-weight: 600; margin-bottom: 12px; }
-.sonography-site .empty-questions p { color: #526375; margin-bottom: 16px; }
+.sonography-site .empty-questions p { color: var(--body); margin-bottom: 16px; }
 /* Reading pages */
 .sonography-site .reading-layout { display: grid; grid-template-columns: 245px minmax(0,1fr); gap: 100px; align-items: start; }
 .sonography-site .reading-content { max-width: 730px; }
 .sonography-site .reading-step { display: grid; grid-template-columns: 38px 1fr; gap: 22px; padding: 30px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 110px; }
 .sonography-site .reading-step:first-child { padding-top: 0; }
-.sonography-site .reading-step-number { color: #087e87; font-size: 12px; padding-top: 6px; }
+.sonography-site .reading-step-number { color: var(--medical-blue); font-size: 12px; padding-top: 6px; }
 .sonography-site .reading-step h2 { font-size: 25px; font-weight: 600; line-height: 1.35; letter-spacing: -.025em; margin-bottom: 18px; }
-.sonography-site .reading-step p { color: #526375; line-height: 1.95; font-size: 15px; }
-.sonography-site .guide-takeaway { display: flex; gap: 20px; padding: 28px; margin-top: 32px; border-radius: 12px; background: #edf4f1; }
-.sonography-site .guide-takeaway > svg { color: #087e87; flex-shrink: 0; margin-top: 4px; }
+.sonography-site .reading-step p { color: var(--body); line-height: 1.95; font-size: 15px; }
+.sonography-site .guide-takeaway { display: flex; gap: 20px; padding: 28px; margin-top: 32px; border-radius: 12px; background: var(--blue-soft); }
+.sonography-site .guide-takeaway > svg { color: var(--medical-blue); flex-shrink: 0; margin-top: 4px; }
 .sonography-site .guide-takeaway h2 { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
-.sonography-site .guide-takeaway p { color: #526375; font-size: 14px; line-height: 1.8; }
+.sonography-site .guide-takeaway p { color: var(--body); font-size: 14px; line-height: 1.8; }
 /* Examination detail */
 .sonography-site .examination-layout { display: grid; grid-template-columns: minmax(0,1fr) 320px; gap: 80px; align-items: start; }
-.sonography-site .exam-symbol { display: inline-flex; padding: 18px; border-radius: 16px; background: #edf4f1; color: #087e87; margin-bottom: 28px; }
-.sonography-site .examination-overview > p:last-child { color: #526375; line-height: 1.9; max-width: 640px; }
-.sonography-site .question-panel { margin-top: 36px; background: #f2f6f4; border-radius: 14px; padding: 32px; }
+.sonography-site .exam-symbol { display: inline-flex; padding: 18px; border-radius: 16px; background: var(--blue-soft); color: var(--medical-blue); margin-bottom: 28px; }
+.sonography-site .examination-overview > p:last-child { color: var(--body); line-height: 1.9; max-width: 640px; }
+.sonography-site .question-panel { margin-top: 36px; background: var(--soft); border-radius: 14px; padding: 32px; }
 .sonography-site .question-panel h2 { font-size: 25px; font-weight: 600; margin: 16px 0 22px; letter-spacing: -.025em; }
-.sonography-site .question-panel li { display: flex; gap: 18px; padding: 18px 0; border-top: 1px solid #d4e0da; color: #526375; font-size: 14px; line-height: 1.8; }
-.sonography-site .question-panel li > span { color: #087e87; font-size: 11px; padding-top: 3px; }
+.sonography-site .question-panel li { display: flex; gap: 18px; padding: 18px 0; border-top: 1px solid var(--border); color: var(--body); font-size: 14px; line-height: 1.8; }
+.sonography-site .question-panel li > span { color: var(--medical-blue); font-size: 11px; padding-top: 3px; }
 .sonography-site .examination-facts { position: sticky; top: 110px; padding: 28px; border: 1px solid var(--rule); border-radius: 14px; }
 .sonography-site .examination-facts h2 { font-size: 26px; font-weight: 600; margin: 16px 0 22px; }
-.sonography-site .examination-facts dt { font-size: 12px; color: #647580; padding-top: 16px; border-top: 1px solid var(--rule); }
+.sonography-site .examination-facts dt { font-size: 12px; color: var(--muted); padding-top: 16px; border-top: 1px solid var(--rule); }
 .sonography-site .examination-facts dd { font-size: 14px; font-weight: 500; margin: 7px 0 16px; }
-.sonography-site .fact-note { display: flex; gap: 10px; font-size: 12px; color: #526375; margin: 24px 0; }
-.sonography-site .fact-note svg { flex-shrink: 0; color: #087e87; }
+.sonography-site .fact-note { display: flex; gap: 10px; font-size: 12px; color: var(--body); margin: 24px 0; }
+.sonography-site .fact-note svg { flex-shrink: 0; color: var(--medical-blue); }
 .sonography-site .examination-facts .btn { width: 100%; font-size: 12px; padding: 14px 12px; }
 .sonography-site .exam-next-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 40px; }
 .sonography-site .exam-next-grid h2 { font-size: 22px; line-height: 1.4; font-weight: 600; margin: 14px 0; }
-.sonography-site .exam-next-grid p:not(.eyebrow) { color: #526375; font-size: 14px; line-height: 1.9; margin-bottom: 14px; }
+.sonography-site .exam-next-grid p:not(.eyebrow) { color: var(--body); font-size: 14px; line-height: 1.9; margin-bottom: 14px; }
 .sonography-site .related-examinations { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
 .sonography-site .related-examinations a { display: flex; gap: 16px; align-items: center; padding: 24px; border: 1px solid var(--rule); border-radius: 12px; font-size: 14px; font-weight: 600; }
-.sonography-site .related-examinations svg { color: #087e87; flex-shrink: 0; }
+.sonography-site .related-examinations svg { color: var(--medical-blue); flex-shrink: 0; }
 .sonography-site .related-examinations a > svg:last-child { margin-left: auto; }
-.sonography-site .related-examinations a:hover { background: #f1f6f3; }
+.sonography-site .related-examinations a:hover { background: var(--soft); }
 /* Text enters once, gently. Sections stay readable if scripting is unavailable. */
 @keyframes editorial-text { from { opacity: .6; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 @keyframes section-reveal { from { opacity: .72; transform: translateY(12px); } to { opacity: 1; transform: none; } }
